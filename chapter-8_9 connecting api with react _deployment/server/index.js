@@ -38,8 +38,8 @@ server.use(express.json()); // BodyParser
 // Middleware for routers
 server.use(cors());
 server.use(express.static(path.resolve(__dirname, process.env.PUBLIC_DIR)));
-server.use("/products", productRouter);
-server.use("/users", userRouter);
+server.use("/api/products", productRouter);
+server.use("/api/users", userRouter);
 
 // for wildcard routes (react routes)
 server.use("*", (req, res) => {

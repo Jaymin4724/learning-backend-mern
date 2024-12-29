@@ -22,7 +22,7 @@ export default function CreateProduct() {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent page reload on form submission
     try {
-      const response = await axios.post("/products", formData);
+      const response = await axios.post("/api/products/", formData);
       console.log("Product created successfully:", response.data);
       alert("Product created successfully!");
       navigate("/products");

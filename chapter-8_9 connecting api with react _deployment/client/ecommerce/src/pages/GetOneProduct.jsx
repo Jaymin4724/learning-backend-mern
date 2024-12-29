@@ -10,7 +10,7 @@ export default function GetOneProduct() {
   useEffect(() => {
     // Fetch product details from the API using the product ID
     axios
-      .get(`/products/${id}`)
+      .get(`/api/products//${id}`)
       .then((response) => {
         setProduct(response.data);
       })

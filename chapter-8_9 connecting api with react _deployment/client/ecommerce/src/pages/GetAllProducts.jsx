@@ -7,7 +7,7 @@ export default function GetAllProducts() {
   const navigate = useNavigate();
   useEffect(() => {
     axios
-      .get("/products/")
+      .get("/api/products/")
       .then((response) => {
         setProducts(response.data);
         console.log(response.data);
@@ -19,7 +19,7 @@ export default function GetAllProducts() {
   const handleDelete = async (id) => {
     try {
       // API call to delete the product
-      await axios.delete(`/products/${id}`);
+      await axios.delete(`/api/products/${id}`);
       // Update the state to remove the deleted product
       const updatedProducts = products.filter((product) => product._id !== id);
       setProducts(updatedProducts);
