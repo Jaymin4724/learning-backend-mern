@@ -1,6 +1,11 @@
 import { readFileSync, writeFileSync } from "fs";
+import path, { dirname } from "path";
 
-const userDataPath = "user.json";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const userDataPath = path.resolve(__dirname, "user.json");
 const users = JSON.parse(readFileSync(userDataPath, "utf-8")).users;
 
 const saveUsers = () => {
