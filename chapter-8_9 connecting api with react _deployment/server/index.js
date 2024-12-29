@@ -12,7 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Validate required environment variables
-if (!process.env.DB_PASSWORD || !process.env.PUBLIC_DIR || !process.env.PORT) {
+if (!process.env.MONGO_URL || !process.env.PUBLIC_DIR || !process.env.PORT) {
   console.error("Missing required environment variables!");
   process.exit(1); // Exit if any required variable is missing
 }
@@ -23,7 +23,7 @@ main().catch((err) => {
 });
 async function main() {
   try {
-    await mongoose.connect(`mongodb://localhost:27017/ecommerce`);
+    await mongoose.connect(process.env.MONGO_URL);
     console.log("mongooseeeeebumps --> DB Connected !!");
   } catch (error) {
     console.error("Database connection error: ", error);
