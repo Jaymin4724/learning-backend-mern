@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "firstname": "John",
+      "lastname": "Doe",
+      "email": "john.doe@gmail.com",
+      "password": "123456"
+    },
+    {
+      "firstname": "Jane",
+      "lastname": "Smith",
+      "email": "jane.smith@gmail.com",
+      "password": "123456"
+    },
+    {
+      "firstname": "Alice",
+      "lastname": "Brown",
+      "email": "alice.brown@gmail.com",
+      "password": "123456"
+    },
+    {
+      "firstname": "Bob",
+      "lastname": "Johnson",
+      "email": "bob.johnson@gmail.com",
+      "password": "123456"
+    },
+    {
+      "firstname": "Charlie",
+      "lastname": "Williams",
+      "email": "charlie.williams@gmail.com",
+      "password": "123456"
+    }
+  ]
+}
